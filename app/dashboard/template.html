@@ -1,0 +1,15 @@
+<md-card id="request">
+    <form name="request-form">
+        <md-input-container>
+            <input mdInput name="method" [ngModel]="request.method" class="request-item"/>
+            <input mdInput name="schema" [(ngModel)]="request.schema"  class="request-item"/>
+            <input mdInput name="host" [(ngModel)]="request.host"  class="request-item"/>
+            <input mdInput name="port" [(ngModel)]="request.port"  class="request-item"/>
+            <input mdInput name="endpoint" [(ngModel)]="request.endpoint"  class="request-item"/>
+        </md-input-container>
+        <md-input-container>
+            <textarea mdInput name="body" [ngModel]="request.body"  class="request-item"/>
+        </md-input-container>
+    </form>
+    <button md-button (click)="send()">Send</button>
+</md-card>
